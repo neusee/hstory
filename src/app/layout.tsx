@@ -1,19 +1,27 @@
 import { Metadata } from "next";
+import Header from "@/components/common/header";
+import Footer from "@/components/common/footer";
+import localFont from "next/font/local"
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
     title: "hstory",
-    description: "프론트엔드 개발자 윤효진의 기술 블로그",
+    description: "윤효진의 기술 블로그 제작 프로젝트",
 };
+
+const pretendard = localFont({
+    src: "",
+    display: "swap",
+});
 
 export default function RootLayout({
     children,
 }: {
-    children: React.ReactNode,
+    children: React.ReactNode;
 }) {
     return (
         <html lang="ko">
-            <body>{children}</body>
+            <body>{ children }</body>
         </html>
     );
 }
