@@ -5,5 +5,11 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = env("file:./dev.db")
+  url      = env("DATABASE_URL")
+}
+
+model Guestbook {
+  id        Int      @id @default(autoincrement())
+  content   String
+  createdAt DateTime @default(now())
 }
