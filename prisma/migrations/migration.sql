@@ -1,4 +1,3 @@
--- CreateTable
 CREATE TABLE "Guestbook" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "content" TEXT NOT NULL,
