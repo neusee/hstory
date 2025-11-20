@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Header from "@/components/common/header";
+import Footer from "@/components/common/footer";
 import "./styles/globals.css";
 
 export const metadata: Metadata = {
@@ -14,15 +16,17 @@ const pretendard = localFont({
 
 export default function RootLayout({ 
     children,
-}: Readonly<{ 
+}: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
         <html lang="ko" className={ pretendard.className } suppressHydrationWarning>
             <body className="">
-                <main className="">
+                <main className="max-w-6xl mx-auto px-4">
+                    <Header />
                     { children }
                 </main>
+                <Footer />
             </body>
         </html>
     );
