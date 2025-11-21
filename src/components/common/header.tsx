@@ -7,9 +7,7 @@ import ThemeSwitcher from "../theme-switcher";
 export default function Header() {
     return (
         <nav className="h-[90px] flex items-center justify-between">
-            <div className="">
-                <Navigation />
-            </div>
+            <Navigation />
             <div className="flex items-center gap-5">
                 <Searchbar />
                 <ThemeSwitcher />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Header from "@/components/common/header";
 import Footer from "@/components/common/footer";
+import { ThemeProvider } from "next-themes";
 import "./styles/globals.css";
 
 export const metadata: Metadata = {
@@ -21,11 +22,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ko" className={ pretendard.className } suppressHydrationWarning>
-            <body className="">
-                <main className="max-w-6xl mx-auto px-4">
-                    <Header />
-                    { children }
-                </main>
+            <body className="max-w-6xl mx-auto">
+                <ThemeProvider>
+                    <main className="flex flex-col">
+                        <Header />
+                        { children }
+                    </main>
+                </ThemeProvider>
                 <Footer />
             </body>
         </html>

@@ -22,7 +22,7 @@ export function NavigationMenuItem({ href, label }: NavigationMenuItemProps) {
     return (
         <Link
             href={ href }
-            className={`px-3 py-2 rounded-lg transition-colors
+            className={`px-3 py-2 rounded-lg transition-colors cursor-pointer font-medium
                 ${ active ? "bg-gray-100 text-black" : "text-gray-400 hover:bg-gray-100" }`}
         >
             { label }
