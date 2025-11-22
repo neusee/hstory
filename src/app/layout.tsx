@@ -25,9 +25,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ko" className={ pretendard.className } suppressHydrationWarning>
-            <body className="max-w-6xl mx-auto">
+            <body className="max-w-5xl mx-auto">
                 <ThemeProvider attribute="class">
-                    <main className="flex flex-col">
+                    <main className="flex flex-col gap-5">
                         <Header />
                         { children }
                     </main>
