@@ -2,15 +2,13 @@
 
 import Navigation from "./navigation";
 import Searchbar from "./searchbar";
-import ThemeSwitcher from "../theme-switcher";
 
 export default function Header() {
     return (
-        <nav className="h-[90px] flex items-center justify-between">
+        <nav className="h-[100px] flex items-center justify-between">
             <Navigation />
             <div className="flex items-center gap-5">
                 <Searchbar />
-                <ThemeSwitcher />
             </div>
         </nav>
     );

@@ -12,6 +12,10 @@ export default function ThemeSwitcher() {
         setMounted(true);
     }, []);
 
+    if (!mounted) {
+        return null;
+    }
+
     return (
         <button 
             className="p-2 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"

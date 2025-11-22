@@ -1,14 +1,25 @@
 import { Search } from "lucide-react";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Searchbar() {
+    const router = useRouter();
+    const pathname = usePathname();
+    const isSearchPage = pathname === "/search";
     
-    const handleSubmit = () => {
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        // 검색 로직
+    };
 
+    const handleSearchbarFocus = () => {
+        if (!isSearchPage) {
+            router.push("/search");
+        }
     };
 
     return (
         <form
-            className="flex items-center gap-2"
+            className="flex items-center"
             role="search"
             onSubmit={ handleSubmit }
         >
@@ -16,8 +27,9 @@ export default function Searchbar() {
                 <input 
                     type="text"
                     placeholder="Search..."
-                    className="bg-transparent outline-none"
+                    className="outline-none text-black placeholder-gray-400"
                     spellCheck={ false }
+                    onFocus={ handleSearchbarFocus }
                 />
                 <button
                     type="submit"

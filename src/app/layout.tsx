@@ -8,6 +8,9 @@ import "./styles/globals.css";
 export const metadata: Metadata = {
     title: "hstory",
     description: "프론트엔드 개발자 윤효진의 이야기",
+    icons: {
+        icon: "/favicon.ico",
+    },
 };
 
 const pretendard = localFont({
@@ -23,7 +26,7 @@ export default function RootLayout({
     return (
         <html lang="ko" className={ pretendard.className } suppressHydrationWarning>
             <body className="max-w-6xl mx-auto">
-                <ThemeProvider>
+                <ThemeProvider attribute="class">
                     <main className="flex flex-col">
                         <Header />
                         { children }
