@@ -1,5 +1,7 @@
 export default function BoardPage() {
     return (
-        <div>보드</div>
+        <div className="">
+            <div></div>
+        </div>
     );
 }

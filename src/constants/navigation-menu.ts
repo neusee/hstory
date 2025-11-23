@@ -4,8 +4,12 @@ export const NavigationMenu = [
         label: "Home",
     },
     {
-        href: "/categories",
-        label: "Categories",
+        href: "/series",
+        label: "Series",
+    },
+    {
+        href: "/tags",
+        label: "Tags", 
     },
     {
         href: "/board",

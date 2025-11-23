@@ -23,7 +23,7 @@ export default function Searchbar() {
             role="search"
             onSubmit={ handleSubmit }
         >
-            <div className="px-3 py-2 rounded-lg bg-gray-100 flex items-center w-full font-medium">
+            <div className="px-3 py-2 rounded-lg bg-gray-100 flex w-full font-medium">
                 <input 
                     type="text"
                     placeholder="Search..."

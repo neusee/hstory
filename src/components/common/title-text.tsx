@@ -1,6 +1,8 @@
+import React from "react";
+
 interface TitleTextProps {
     title: string;
-    discription: string;
+    discription: React.ReactNode;
 }
 
 export default function TitleText({
@@ -8,8 +10,8 @@ export default function TitleText({
     discription,
 }: TitleTextProps) {
     return (
-        <div className="flex flex-col gap-4">
-            <h1 className="text-3xl font-bold">
+        <div className="flex flex-col">
+            <h1 className="text-3xl font-bold mb-5">
                 { title }
             </h1>
             { discription && (
